@@ -56,3 +56,21 @@ superSensei.speakWisdom();
 superSensei.showStats();
 // -> "Name: Master Splinter, Health: 210, Speed: 10, Strength: 10"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
