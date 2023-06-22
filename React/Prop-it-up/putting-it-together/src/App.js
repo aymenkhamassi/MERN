@@ -14,8 +14,8 @@ function App() {
   
   return (
     <div className="App">
-      {peopleArr.map(person => {
-        return <PersonCard firstName={person.firstName} lastName={person.lastName} age={person.age} hairColor={person.hairColor} />
+      {peopleArr.map((person,i) => {
+        return <PersonCard firstName={person.firstName} lastName={person.lastName} age={person.age} hairColor={person.hairColor} key={i}/>
       })
       
       }
