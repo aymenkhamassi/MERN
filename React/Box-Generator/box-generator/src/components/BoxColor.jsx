@@ -46,7 +46,7 @@ const BoxColor = (props) => {
               width: '250px',
               height: '250px',
               backgroundColor: boxColor,
-              margin: 'auto',
+              margin: '20px',
             }}
           />
         ))}
