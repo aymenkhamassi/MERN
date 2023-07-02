@@ -24,7 +24,7 @@ const Form = (props) => {
     </div>
     <div>
         <label>Email Address: </label> 
-        <input type="text" onChange={ (e) => setEmail(e.target.value) } />
+        <input type="text"  onChange={ (e) => setEmail(e.target.value) } />
     </div>
     <div>
         <label>Password: </label>
@@ -35,12 +35,21 @@ const Form = (props) => {
         <input type="password" onChange={ (e) => setConfirm(e.target.value) } />
     </div>
     <p>Your Form Data</p>
+     <ul>
+        <li>First Name : {firstname}</li>
+        <li>Last Name : {lastname}</li>
+        <li>Email : {email}</li>
+        <li>Password : {password}</li>
+        <li>Confirm Password : {confirmpass}</li>
+     </ul>
+     {/* <h5>First Name : {firstname}</h5>
+     <h5>Last Name : {lastname} </h5>
+     <h5>Email : {email}</h5>
+     <h5>Password : {password}</h5>
+     <h5>Confirm Password : {confirmpass}</h5>
 
-    <h5>First Name :{firstname}</h5>
-    <h5>Last Name :{lastname} </h5>
-    <h5>Email :{email}</h5>
-    <h5>Password :{password}</h5>
-    <h5>Confirm Password :{confirmpass}</h5>
+      */}
+    
 
     </form>
   );
