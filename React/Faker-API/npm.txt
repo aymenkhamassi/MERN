@@ -1,0 +1,4 @@
+npm init -y // creation package .jason
+npm install express
+npm install nodemon -g
+nodemon server.js
