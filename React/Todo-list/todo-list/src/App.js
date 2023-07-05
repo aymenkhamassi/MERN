@@ -1,10 +1,10 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import './App.css';
 
 function App() {
 
-  const[newTodo,setNewTodo] = useState("");
-  const[todos,setTodos] = useState([]);
+  const[newTodo,setNewTodo] = useState("")
+  const[todos,setTodos] = useState(JSON.parse(localStorage.getItem('todos')) || []);
 
   const handleNewTodoSubmit = (e) => {
     e.preventDefault();
@@ -44,7 +44,9 @@ function App() {
     setTodos(updatedTodos);
   }
 
-
+  useEffect(()=> {
+    localStorage.setItem("todos",JSON.stringify(todos))
+  },[todos])
 
 
   return (
