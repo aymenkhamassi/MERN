@@ -1,18 +1,4 @@
-Microsoft Windows [version 10.0.22621.1848]
-(c) Microsoft Corporation. Tous droits réservés.
 
-C:\Users\khammassi>mongosh
-Current Mongosh Log ID: 64a5b122b2a2894f001eff80
-Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1
-Using MongoDB:          6.0.7
-Using Mongosh:          1.10.1
-
-For mongosh info see: https://docs.mongodb.com/mongodb-shell/
-
-------
-   The server generated these startup warnings when booting
-   2023-07-05T14:03:36.363+02:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
-------
 ***************************//Create a database called 'my_first_db'.****************************************************
 
 test> use my-first-db
