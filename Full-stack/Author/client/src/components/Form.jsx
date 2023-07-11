@@ -7,6 +7,8 @@ import axios from 'axios';
 const Form = props =>{
     const[author,setAuthor] = useState("");
     const navigate = useNavigate();
+    const [errors, setErrors] = useState([])
+    const [errorObject, setErrorObject] = useState({})
     
     const handelSubmit = e =>{
         e.preventDefault()
@@ -18,7 +20,22 @@ const Form = props =>{
                 console.log(res)
                 navigate("/")
             })
-            .catch(err=>console.log(err))
+            //.catch(err=>{console.log(err)
+            .catch((err) => {
+                console.log(err)
+                console.log(err.response.data)
+                setErrorObject(err.response.data.errors)
+                // const errorResponse = err.response.data.errors
+                const errorArr =[]
+                 for (const key of Object.keys(err.response.data.errors)) {
+                  errorArr.push(err.response.data.errors[key].message)
+                 }
+                console.log("==============",errorArr)
+                setErrors(errorArr)
+            })
+                
+               
+    
     }
     
   
@@ -33,6 +50,7 @@ const Form = props =>{
             <label>Name : </label>
             <input  onChange = { e => setAuthor(e.target.value)}/>
             </p>
+            {errorObject.author?<p className='text-danger'>{errorObject.author.message}</p>:""}
         
             <button className="btn btn-success">Submit</button>
             <button onClick={()=>{navigate("/")}} className="btn btn-primary">Cancel</button>
